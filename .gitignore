@@ -88,3 +88,9 @@ wp-content/plugins/hello.php
 
 
 # End of https://www.gitignore.io/api/phpstorm,wordpress
+.idea/
+wp-content/plugins/wp-dropzone.1.0.5/
+wp-content/plugins/wp-dropzone/
+wp-content/plugins/wp-fullpage/inc/admin/js-handlers/assets/img/
+wp-content/plugins/wp-fullpage/inc/admin/metaboxes/assets/css/
+wp-content/plugins/wp-fullpage/inc/admin/settings/assets/css/
