@@ -11,23 +11,21 @@
 
 ?>
 
-	</div><!-- #content -->
+	</main><!-- #content -->
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'khiit' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'khiit' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'khiit' ), 'khiit', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="footer-contacts">
+                <span class="phone">000 000  0000</span>
+                <a href="mailto:info@khiit.com">info@khiit.com</a>
+            </div>
+            <ul class="footer-nav">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Term &amp; Conditions</a></li>
+            </ul>
+            <p class="copy">&copy; KHIIT 2018. All rights reserved.</p>
+        </div>
+    </footer>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
