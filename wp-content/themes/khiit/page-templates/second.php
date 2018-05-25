@@ -14,7 +14,6 @@ $loop = new WP_Query( $args );
 while ( $loop->have_posts() ) : $loop->the_post();
     echo '<section class="fullpage">';
     ?>
-
     <?php
         the_title();
         the_content();
