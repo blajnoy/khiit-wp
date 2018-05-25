@@ -44,7 +44,17 @@
                     </a>-->
                     <strong class="logo-slogan"><?php bloginfo( 'description' ); ?></strong>
                 </div>
-                <nav class="navbar">
+                <nav id="header__menu" class="header__menu">
+                    <?php
+                    wp_nav_menu( array(
+                        'theme_location' => 'main-menu',
+                        'menu_id'        => 'primary-menu',
+                        'container'=> false
+                    ) );
+                    ?>
+                </nav>
+                <!-- #site-navigation -->
+                <!--<nav class="navbar">
                     <ul class="nav">
                         <li><a href="#">Our Story</a>
                             <ul class="sub-nav">
@@ -76,7 +86,7 @@
                             </ul>
                         </li>
                     </ul>
-                </nav>
+                </nav>-->
             </div>
         </header>
 

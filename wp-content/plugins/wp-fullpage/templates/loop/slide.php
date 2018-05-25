@@ -45,13 +45,15 @@
 				?>
 
 					<?php WPFP_Query()->get_slide_title( 0, '<h2 class="entry-title icon">', '</h2>' ); ?>
-			
+
 				<?php
 
 					endif;
 
 				?>
-				
+
+
+
 				<div class="entry-meta">
 					
 					<?php

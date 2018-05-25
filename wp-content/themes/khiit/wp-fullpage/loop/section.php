@@ -18,6 +18,16 @@
 
 	?>
 
+    <?php
+
+        $content = get_sub_field('content');
+
+    ?>
+
+    <div class="content">
+        <?php echo $content; ?>
+    </div>
+
 	<?php
 
 		if( WPFP_Query()->section_has_slides_navigation() )

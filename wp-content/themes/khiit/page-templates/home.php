@@ -4,10 +4,6 @@ Template Name: Homepage template
 */
 get_header(); ?>
 
-<?php /*if (have_posts()) : while (have_posts()) : the_post(); */?><!--
-    <?php /*the_content(); */?>
---><?php /*endwhile; endif; */?>
-
     <div class="slogan-wrapper container">
         <h1 class="slogan">A <a href="#">hub</a> for innovative people who really <a href="#">know</a> how to make <a href="#">technologies</a> work.</h1>
     </div>
@@ -52,33 +48,6 @@ get_header(); ?>
             </div>
 
         <?php endif; ?>
-
-        <!--<div class="features-list">
-            <div class="item">
-                <a href="#">
-                    <div class="img-h">
-                        <img src="images/img01.jpg" alt="image">
-                    </div>
-                    <strong class="name">ABOUT</strong>
-                </a>
-            </div>
-            <div class="item">
-                <a href="#">
-                    <div class="img-h">
-                        <img src="images/img01.jpg" alt="image">
-                    </div>
-                    <strong class="name">DISTANCE EDUCATION</strong>
-                </a>
-            </div>
-            <div class="item">
-                <a href="#">
-                    <div class="img-h">
-                        <img src="images/img01.jpg" alt="image">
-                    </div>
-                    <strong class="name">SPECIALIZED TRAINING</strong>
-                </a>
-            </div>
-        </div>-->
     </div>
 
 <?php get_footer(); ?>
