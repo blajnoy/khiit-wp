@@ -30,13 +30,24 @@
                     <strong class="logo-slogan"><?php bloginfo( 'description' ); ?></strong>
                 </div>
                 <nav id="header__menu" class="navbar">
-                    <?php
-                    wp_nav_menu( array(
-                        'theme_location' => 'main-menu',
-                        'menu_id'        => 'primary-menu',
-                        'container'=> false
-                    ) );
-                    ?>
+
+                    <?php if ( is_front_page() ) : ?>
+                        <?php
+                            wp_nav_menu( array(
+                                'theme_location' => 'main-menu',
+                                'menu_id'        => 'primary-menu',
+                                'container'=> false
+                            ));
+                        ?>
+                    <?php else : ?>
+                        <?php
+                            wp_nav_menu( array(
+                                'theme_location' => 'fullpage-menu',
+                                'menu_id'        => 'fullpage-menu',
+                                'container'=> false
+                            ));
+                        ?>
+                    <?php endif; ?>
                 </nav>
             </div>
         </header>

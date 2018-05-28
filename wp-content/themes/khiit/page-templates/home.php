@@ -28,26 +28,26 @@ get_header(); ?>
             <div class="features-list">
 
                 <?php while( have_rows('features_list') ): the_row();
-                    // vars
                     $image = get_sub_field('image');
                     $title = get_sub_field('title');
                     $link = get_sub_field('link');
-                    ?>
+                ?>
 
-                    <div class="item">
-                        <a href="<?php echo $link; ?>">
-                            <div class="img-h">
-                                <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
-                            </div>
-                            <strong class="name"><?php echo $title; ?></strong>
-                        </a>
-                    </div>
+                <div class="item">
+                    <a href="<?php echo $link; ?>">
+                        <div class="img-h">
+                            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
+                        </div>
+                        <strong class="name"><?php echo $title; ?></strong>
+                    </a>
+                </div>
 
                 <?php endwhile; ?>
 
             </div>
 
         <?php endif; ?>
+
     </div>
 
 <?php get_footer(); ?>
