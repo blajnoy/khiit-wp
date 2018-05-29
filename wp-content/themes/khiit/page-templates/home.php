@@ -3,14 +3,17 @@
 Template Name: Homepage template
 */
 get_header(); ?>
+    <?php
+        $slogan = get_field('slogan');
+    ?>
 
     <div class="slogan-wrapper container">
-        <h1 class="slogan">A <a href="#">hub</a> for innovative people who really <a href="#">know</a> how to make <a href="#">technologies</a> work.</h1>
+        <h1 class="slogan"><?php echo $slogan; ?></h1>
     </div>
     <div class="features-list-wrapper container">
         <div class="ttl-row">
             <span>From the Education</span>
-            <a href="#" class="lnk-view-all">View all
+            <a href="/educaion" class="lnk-view-all">View all
                 <svg class="ico-arrow" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 200 109.907" xml:space="preserve">
                     <g>
                         <circle style="fill:#AAABAB;" cx="15.623" cy="55.266" r="15.623"/>
