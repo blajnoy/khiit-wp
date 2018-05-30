@@ -15,7 +15,7 @@
         <footer id="footer" class="footer">
             <div class="container">
                 <div class="footer-contacts">
-                    <span class="phone">000 000  0000</span>
+                    <span class="phone">000 000 0000</span>
                     <a href="mailto:info@khiit.com">info@khiit.com</a>
                 </div>
                 <ul class="footer-nav">
@@ -26,9 +26,13 @@
             </div>
         </footer>
         </div><!-- #wrapper -->
-    <?php else : ?>
+    <?php elseif (is_page( 'contact' )) : ?>
         </main><!-- #main-content -->
         </div><!-- #wrapper -->
+    <?php else: ?>
+        </main><!-- #main-content -->
+        </div><!-- #wrapper -->
+        <div class="overlay"></div>
     <?php endif; ?>
 
 <?php wp_footer(); ?>

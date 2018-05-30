@@ -15,7 +15,7 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?php wp_title( '|', true, 'right' ); ?></title>
+    <title><?php wp_title( '', true, 'right' ); ?></title>
 	<link rel="profile" href="http://gmpg.org/xfn/11">
     <? wp_enqueue_script( 'jquery' ); ?>
 
@@ -30,8 +30,8 @@
                     <?php the_custom_logo(); ?>
                     <strong class="logo-slogan"><?php bloginfo( 'description' ); ?></strong>
                 </div>
+                <div class="mobile-nav-toggle"><span></span></div>
                 <nav id="header__menu" class="navbar">
-
                     <?php if ( is_front_page() ) : ?>
                         <?php
                             wp_nav_menu( array(

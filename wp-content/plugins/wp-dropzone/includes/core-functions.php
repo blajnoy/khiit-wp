@@ -32,9 +32,10 @@ function wp_dz_add_shortcode($atts) {
 		'border-color' => '',
 		'background' => '',
 		'margin-bottom' => '',
-		'max-file-size' => '',
+		'max-file-size' => '25',
 		'remove-links' => '',
-		'clickable' => '',
+        'previewsContainer' => '#dropzonePreview',
+		'clickable' => '#dropzonePreview',
 		'accepted-files' => '',
 		'max-files' => '',
 		'max-files-alert' => '',
@@ -85,7 +86,7 @@ function wp_dz_add_shortcode($atts) {
 		$html .= '<button class="process-upload" id="process-' . $id . '">' . $atts['upload-button-text'] . '</button>';
 	}
 
-	$js = 'Dropzone.options.wpDz' . ucfirst($id) . ' = {
+	$js = 'Dropzone.options.contactForm' . ucfirst($id) . ' = {
 		url: "' . $ajax_url . '?action=wp_dz",
 		paramName: "file",
 		' . ($atts['max-file-size'] ? 'maxFilesize: ' . $atts['max-file-size'] . ',' : '') . '
@@ -101,6 +102,7 @@ function wp_dz_add_shortcode($atts) {
 		' . ($atts['thumbnail-width'] ? 'thumbnailWidth: ' . $atts['thumbnail-width'] . ',' : '') . '
 		' . ($atts['thumbnail-height'] ? 'thumbnailHeight: ' . $atts['thumbnail-height'] . ',' : '') . '
 		' . ($atts['thumbnail-method'] ? 'thumbnailMethod: "' . $atts['thumbnail-method'] . '",' : '') . '
+		' . ($atts['previews-container'] ? 'previewsContainer: "' . $atts['previews-container'] . '",' : '') . '
 
 		init: function() {
 			' . ($atts['auto-process'] == 'false' ? 'var closure = this; document.getElementById("process-' . $id . '").addEventListener("click", function() { closure.processQueue(); })' : '') . '
@@ -183,7 +185,7 @@ function wp_dz_ajax_upload_handle() {
 			}
 
 			$message['error'] = 'false';
-			$message['data'] = wp_get_attachment_url($attach_id);	
+			$message['data'] = wp_get_attachment_url($attach_id);
 		} else {
 			$message['error'] = 'true';
 			$message['data'] = $movefile['error'];

@@ -29,8 +29,8 @@ get_header(); ?>
         ?>
 
         <?php
-        $image = get_field('image');
         $heading = get_field('heading');
+        $image = get_field('image');
         ?>
 
         <div class="content-col">
@@ -51,9 +51,11 @@ get_header(); ?>
                 </a>
             <?php endif; ?>
         </div>
-        <div class="aside-img">
-            <img data-src="<?php echo $image['url']; ?>" alt=""/>
-        </div>
+        <?php if( $image ) { ?>
+            <div class="aside-img">
+                <img data-src="<?php echo $image['url']; ?>" alt=""/>
+            </div>
+        <?php } ?>
 
         <?php
         wp_reset_postdata();
@@ -63,5 +65,4 @@ get_header(); ?>
     echo '</fullpage>';
 
 ?>
-
 <?php get_footer(); ?>

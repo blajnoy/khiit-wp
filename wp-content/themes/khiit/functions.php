@@ -117,6 +117,11 @@ function khiit_widgets_init() {
 }
 add_action( 'widgets_init', 'khiit_widgets_init' );
 
+
+/**
+ * Add the class to menu item for the current page.
+ */
+
 /**
  * Enqueue scripts and styles.
  */
