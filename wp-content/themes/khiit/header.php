@@ -32,28 +32,13 @@
                 </div>
                 <div class="mobile-nav-toggle"><span></span></div>
                 <nav id="header__menu" class="navbar">
-                    <?php if ( is_front_page() ) : ?>
-                        <?php
-                            wp_nav_menu( array(
-                                'theme_location' => 'main-menu',
-                                'menu_id'        => 'primary-menu',
-                                'container'=> false
-                            ));
-                        ?>
-                    <?php else : ?>
-                        <?php
-                            wp_nav_menu( array(
-                                'theme_location' => 'main-menu',
-                                'menu_id'        => 'primary-menu',
-                                'container'=> false
-                            ));
-                            /*wp_nav_menu( array(
-                                'theme_location' => 'fullpage-menu',
-                                'menu_id'        => 'fullpage-menu',
-                                'container'=> false
-                            ));*/
-                        ?>
-                    <?php endif; ?>
+                    <?php
+                    wp_nav_menu( array(
+                        'theme_location' => 'main-menu',
+                        'menu_id'        => 'primary-menu',
+                        'container'=> false
+                    ));
+                    ?>
                 </nav>
             </div>
         </header>
