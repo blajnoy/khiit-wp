@@ -15,9 +15,9 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?php wp_title( '', true, 'right' ); ?></title>
+    <?php _wp_render_title_tag(); ?>
 	<link rel="profile" href="http://gmpg.org/xfn/11">
-    <? wp_enqueue_script( 'jquery' ); ?>
+    <?php /*wp_enqueue_script( 'jquery' ); */?>
 
     <?php wp_head(); ?>
 </head>
