@@ -24,7 +24,6 @@ get_header(); ?>
             </a>
         </div>
 
-
         <?php if( have_rows('features_list') ): ?>
 
             <div class="features-list">
