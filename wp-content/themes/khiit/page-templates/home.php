@@ -32,6 +32,7 @@ get_header(); ?>
                 <?php while( have_rows('features_list') ): the_row();
                     $image = get_sub_field('image');
                     $title = get_sub_field('title');
+                    $hoverText = get_sub_field('hover-text');
                     $link = get_sub_field('link');
                 ?>
 
@@ -39,6 +40,7 @@ get_header(); ?>
                     <a href="<?php echo $link; ?>">
                         <div class="img-h">
                             <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
+                            <span class="text-h"><?php echo $hoverText; ?></span>
                         </div>
                         <strong class="name"><?php echo $title; ?></strong>
                     </a>

@@ -603,38 +603,51 @@ footer {
 	fill: currentColor !important; }
 
 .features-list {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-ms-flex-wrap: wrap;
-	flex-wrap: wrap;
 	margin: 0 -10px;
-	-webkit-box-align: start;
-	-ms-flex-align: start;
-	align-items: flex-start; }
+	display: block; }
 .features-list .item {
-	-webkit-box-flex: 1;
-	-ms-flex: 1;
-	flex: 1;
-	margin: 0 10px;
+	padding: 0 10px;
 	color: #ffffff; }
 .features-list .item .img-h {
 	width: 100%;
 	position: relative;
 	border-bottom: 5px solid #1d7791;
-	margin: 0 0 5px; }
+	margin: 0 0 5px;
+	-webkit-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	transition: all 0.2s ease; }
 .features-list .item .img-h img {
 	display: block;
 	width: 100%;
 	height: auto; }
+.features-list .item .img-h .text-h {
+	background: rgba(0, 0, 0, 0.6);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 15px;
+	color: #ffffff;
+	font-family: "CenturyGothic-Bold", sans-serif;
+	font-size: 2.5rem;
+	line-height: 1.1;
+	-webkit-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+	opacity: 0; }
 .features-list .item a {
 	color: currentColor;
 	-webkit-transition: all 0.2s ease;
 	-o-transition: all 0.2s ease;
 	transition: all 0.2s ease; }
 .features-list .item a:hover {
-	text-decoration: none;
-	color: #1d7791; }
+	text-decoration: none; }
+.features-list .item a:hover .img-h {
+	border-bottom-color: #ffffff; }
+.features-list .item a:hover .text-h {
+	opacity: 1; }
+.features-list .item .name {
+	text-transform: uppercase; }
 
 .heading {
 	margin: 0 0 30px; }
@@ -691,6 +704,48 @@ footer {
 	display: -ms-flexbox;
 	display: flex;
 	justify-items: center; }
+
+.iScrollIndicator {
+	background: #1d7791 !important; }
+
+.smart-page-loader {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0; }
+.smart-page-loader svg {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -50px 0 0 -50px;
+	width: 100px;
+	height: 100px;
+	-webkit-animation-name: spinner;
+	animation-name: spinner;
+	-webkit-animation-timing-function: linear;
+	animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	-webkit-animation-duration: 5s;
+	animation-duration: 5s;
+	will-change: transform; }
+
+@-webkit-keyframes spinner {
+	from {
+		-webkit-transform: rotateY(0deg);
+		transform: rotateY(0deg); }
+	to {
+		-webkit-transform: rotateY(360deg);
+		transform: rotateY(360deg); } }
+
+@keyframes spinner {
+	from {
+		-webkit-transform: rotateY(0deg);
+		transform: rotateY(0deg); }
+	to {
+		-webkit-transform: rotateY(360deg);
+		transform: rotateY(360deg); } }
 
 @media screen and (max-width: 1366px) {
 	.container {
@@ -754,6 +809,11 @@ footer {
 		width: 110px; }
 	.contact-form textarea {
 		font-size: 1.3rem; } }
+
+.fp-scroller {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex; }
 
 /* Century Gothic */
 /* Book Antiqua */
@@ -834,7 +894,7 @@ footer {
 	-ms-transform: translateX(-50%);
 	transform: translateX(-50%);
 	will-change: transform;
-	padding: 15px;
+	padding: 15px 15px 0;
 	max-height: 0;
 	opacity: 0;
 	overflow: hidden;
@@ -1040,13 +1100,9 @@ footer {
 	align-items: flex-start; }
 .footer a {
 	color: currentColor; }
-.footer .footer-contacts {
-	padding: 0 65px 0 0; }
-.footer .footer-contacts span {
-	display: block;
-	padding: 0 0 5px; }
 .footer .footer-nav li {
-	padding: 0 0 5px; }
+	padding: 0 20px 0 0;
+	display: inline-block; }
 .footer .copy {
 	margin: 0 0 0 auto; }
 
@@ -1344,3 +1400,4 @@ footer {
 	border-right: 6px solid transparent;
 	border-bottom: 6px solid #be2626; }
 
+/*# sourceMappingURL=styles.css.map */

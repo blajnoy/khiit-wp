@@ -144,7 +144,9 @@ add_action( 'widgets_init', 'khiit_widgets_init' );
  * Enqueue scripts and styles.
  */
 function khiit_scripts() {
-	wp_enqueue_style( 'khiit-style', get_stylesheet_uri() );
+    wp_enqueue_style( 'khiit-styles-libs', get_template_directory_uri() . '/css/libs.css');
+
+    wp_enqueue_style( 'khiit-style', get_stylesheet_uri() );
 
     wp_enqueue_script( 'khiit-libs', get_template_directory_uri() . '/js/libs.js', array(), '20151215', true );
 
