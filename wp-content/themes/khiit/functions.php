@@ -44,7 +44,8 @@ if ( ! function_exists( 'khiit_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'main-menu' => esc_html__( 'Primary', 'khiit' )
+			'main-menu' => esc_html__( 'Primary', 'khiit' ),
+            'footer-menu' => esc_html__( 'Primary', 'khiit' )
 		) );
 
 		/*

@@ -14,10 +14,13 @@
         </main><!-- #main-content -->
         <footer id="footer" class="footer">
             <div class="container">
-                <ul class="footer-nav">
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Term &amp; Conditions</a></li>
-                </ul>
+                <?php
+                    wp_nav_menu( array(
+                        'theme_location' => 'footer-menu',
+                        'menu_id'        => 'footer-nav',
+                        'container'=> false
+                    ));
+                ?>
                 <p class="copy">&copy; KHIIT 2001‐2018. All rights reserved.</p>
             </div>
         </footer>
@@ -25,10 +28,6 @@
     <?php elseif (is_page( 'contact' )) : ?>
         </main><!-- #main-content -->
         </div><!-- #wrapper -->
-    <?php else: ?>
-        </main><!-- #main-content -->
-        </div><!-- #wrapper -->
-        <div class="overlay"></div>
     <?php endif; ?>
 
 <?php wp_footer(); ?>
