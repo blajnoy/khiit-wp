@@ -18,7 +18,6 @@
     <?php _wp_render_title_tag(); ?>
 	<link rel="profile" href="http://gmpg.org/xfn/11">
     <?php /*wp_enqueue_script( 'jquery' ); */?>
-
     <?php wp_head(); ?>
 </head>
 
